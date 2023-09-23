@@ -9,10 +9,10 @@ function App() {
       <header className="App-header">
 
         {map.initMap()}
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* <img src={logo} className="App-logo" alt="logo" />
         <p>
           scrapeWebsite("https://en.wikipedia.org/wiki/United_States")
-        </p>
+        </p> */}
         <a
           className="App-link"
           href="https://reactjs.org"

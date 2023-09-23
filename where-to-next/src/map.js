@@ -1,4 +1,4 @@
-"use strict";
+const google = window.google;
 
 function initMap() {
   const myLatLng = {
@@ -6,7 +6,7 @@ function initMap() {
     lng: -75.1530532836914
   };
   const map = new google.maps.Map(document.getElementById("gmp-map"), {
-    zoom: 14,
+    zoom: 4,
     center: myLatLng,
     fullscreenControl: false,
     zoomControl: true,
