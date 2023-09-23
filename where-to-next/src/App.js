@@ -1,5 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
+import scrapeWebsite from './scraper.js'
+
+
 
 function App() {
   return (
@@ -7,7 +10,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          helloooo
+          scrapeWebsite("https://en.wikipedia.org/wiki/United_States")
         </p>
         <a
           className="App-link"
