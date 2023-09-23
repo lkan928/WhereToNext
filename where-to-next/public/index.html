@@ -9,6 +9,20 @@
       name="description"
       content="Web site created using create-react-app"
     />
+    <title>Simple Marker</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&callback=initMap&libraries=&v=weekly" defer></script>
+    <link rel="stylesheet" href="./style.css"/>
+    <script src="./app.js"></script>
+    <!DOCTYPE html>
+    <html>
+      
+      <body>
+        
+      </body>
+    </html>
+
+
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -27,9 +41,11 @@
     <title>React App</title>
   </head>
   <body>
+    <div id="gmp-map"></div>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    
     <!--
+      <div id="root"></div>
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
