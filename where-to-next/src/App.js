@@ -10,7 +10,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          scrapeWebsite("https://en.wikipedia.org/wiki/United_States")
+        {scrapeWebsite("https://en.wikipedia.org/wiki/United_States")}
         </p>
         <a
           className="App-link"
@@ -24,5 +24,5 @@ function App() {
     </div>
   );
 }
-
+ 
 export default App;

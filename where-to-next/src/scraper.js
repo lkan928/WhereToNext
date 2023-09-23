@@ -1,10 +1,13 @@
-const axios = require("axios");
-const cheerio = require("cheerio");
+import axios from 'axios';
 
-const url = "https://en.wikipedia.org/wiki/United_States";
+//const axios = require('axios');
+const cheerio = require('cheerio');
 
-function scrapeWebsite() {    
-    return axios.get(url).then((response) =>
+//const url = "https://en.wikipedia.org/wiki/United_States";
+
+export function scrapeWebsite(url) {    
+    const response =  axios.get(url)
+    .then((response) =>
         {
         if (response.status === 200) {
             const $ = cheerio.load(response.data)
@@ -22,4 +25,7 @@ function scrapeWebsite() {
         .catch((error) => { 
             console.error('Error:',error);
         })
-    }
+    return response
+ }
+
+
