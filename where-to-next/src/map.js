@@ -18,3 +18,5 @@ function initMap() {
     title: "My location"
   });
 }
+
+export default initMap();
