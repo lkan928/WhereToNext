@@ -36,15 +36,12 @@ function App() {
     context.strokeStyle = Colors.FLORAL;
     context.strokeText("Go!", 138, 115);
   };
-  const createButton = () => {
-    
-  };
+  
 
   useEffect(() => {
     drawBackground();
     drawRectangle();
     drawFRectangle();
-    drawText();
   }, []);
   
 
@@ -67,15 +64,39 @@ function App() {
       height: "800px",
       background: "url('./bg-img.jpg')",
     }}
-    
-    
     />
+    <script>
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+              //window.devicePixelRatio=1; //Blury Text
+        window.devicePixelRatio=2;      //Clear Text
+        //(CSS pixels).
+              //Display Size
+        var size = 150;
+        canvas.style.width = size + "px";
+        canvas.style.height = size + "px";
+  
+        var scale = window.devicePixelRatio; 
+            
+        canvas.width = Math.floor(size * scale);
+        canvas.height = Math.floor(size * scale);
+  
+        //CSS pixels for coordinate systems
+        ctx.scale(scale, scale);
+        ctx.font = '10px Arial';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+  
+        var x = size / 2;
+        var y = size / 2;
+  
+        var textString = "GEEKS FOR GEEKS";
+        ctx.fillText(textString, x, y);
+    </script>
    
       
       <header className="App-header">
-
       <a class="btn btn-large btn-info" href="https://www.howtocanvas.com/">Home</a>
-
         <p>
           Page Title: {pageData.pageTitle}
         </p>
