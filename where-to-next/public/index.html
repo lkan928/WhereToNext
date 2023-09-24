@@ -1,35 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="./favicon_ioW2N/favicon-16x16.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <title>Add Map</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="./favicon_ioW2N/favicon-16x16.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Where To Next Map</title>
+  <style>
+    #map{
+      height:400px;
+      width:100%;
+    }
+  </style>
 
-    <link rel="stylesheet" type="text/css" href="./style.css" />
-    <script type="module" src="./index.js"></script>
-  </head>
+  <link rel="stylesheet" type="text/css" href="./style.css" />
+  <script type="module" src="./index.js"></script>
+</head>
   <body>
-    <h3>Google Maps Events</h3>
-    <!--The div element for the map -->
+    <h1>Google Maps Events</h1>
     <div id="map"></div>
     <script>
       function initMap() {
-        let serc = {lat: 39.981971740722656, lng: -75.1530532836914};
-        let map = new google.maps.Map(
+        // Map otions
+        var serc = {lat: 39.981971740722656, lng: -75.1530532836914};
+        // New map
+        var map = new google.maps.Map(
           document.getElementById('map'), {zoom: 4, center: serc}
         );
-        let marker = new google.maps.Marker({position: serc, map: map})
+        // Add marker
+        var marker = new google.maps.Marker({position: serc, map: map})
+
+        var infoWindow = new google.maps.infoWindow({
+          content: 'Philadelphia, PA'
+        });
       }
     </script>
     <!-- prettier-ignore -->
-    <script async defer src="https://maps.api.google.com/js?key=#####&callback=initMap"></script>
+    <script async defer src="https://maps.api.google.com/js?key=AIzaSyBaA3BKfXn0xR6Sr4_72Cb4rnGm_lyfrnY&callback=initMap"></script>
 
 
 
@@ -59,4 +66,5 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-</html>
+    </body>
+    </html>
