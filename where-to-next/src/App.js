@@ -4,7 +4,6 @@ import scrapeWebsite from './scraper.js';
 import Colors from './colors.js'
 
 
-
 function App() {
   const [pageData, setPageData] = useState({ pageTitle: "", headingText: "" });
   
@@ -74,7 +73,9 @@ function App() {
    
       
       <header className="App-header">
+
       <a class="btn btn-large btn-info" href="https://www.howtocanvas.com/">Home</a>
+
         <p>
           Page Title: {pageData.pageTitle}
         </p>
