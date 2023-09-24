@@ -1,8 +1,8 @@
 import React, { useRef,useState, useEffect } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import scrapeWebsite from './scraper.js';
 import Colors from './colors.js'
+
 
 
 function App() {
@@ -37,6 +37,9 @@ function App() {
     context.strokeStyle = Colors.FLORAL;
     context.strokeText("Go!", 138, 115);
   };
+  const createButton = () => {
+    
+  };
 
   useEffect(() => {
     drawBackground();
@@ -65,23 +68,10 @@ function App() {
       height: "800px",
       background: "url('./bg-img.jpg')",
     }}
-  />
-    <script>
-    var canvas = document.getElementById('canvas');
-        var ctx = canvas.getContext('2d');
-              //window.devicePixelRatio=1; //Blury Text
-        window.devicePixelRatio=2;      //Clear Text
-        //(CSS pixels).
-              //Display Size
-        var size = 150;
-        canvas.style.width = size + "px";
-        canvas.style.height = size + "px";
-  
-        var scale = window.devicePixelRatio; 
-            
-        canvas.width = Math.floor(size * scale);
-        canvas.height = Math.floor(size * scale);
-    </script>
+    
+    
+    />
+   
       
       <header className="App-header">
       <a class="btn btn-large btn-info" href="https://www.howtocanvas.com/">Home</a>
